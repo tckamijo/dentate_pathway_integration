@@ -1,0 +1,6 @@
+# Core numerical libraries
+numpy>=1.22,<2.0
+scipy>=1.8,<2.0
+
+# Plotting and visualization
+matplotlib>=3.5,<4.0
