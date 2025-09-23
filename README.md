@@ -1,5 +1,9 @@
 # Dentate Gyrus Three-Pathway Integration Analysis
 
+![Python](https://img.shields.io/badge/python-3.7%2B-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
+![GitHub stars](https://img.shields.io/github/stars/tckamijo/dentate_pathway_integration?style=social)
+
 Code for computational analysis of three-pathway synaptic dynamics in dentate gyrus granule cells.
 
 ## Installation
