@@ -1,0 +1,22 @@
+# Experimental Parameters for Simulations
+
+[General]
+baseline_duration = 500   # ms
+stimulation_duration = 2000   # ms
+num_pulses = 5
+frequency_range = 0.1 - 40 Hz
+
+[DD pathway]
+tau_rec = 50 ms
+tau_facil = 300 ms
+U = 0.90
+
+[MD pathway]
+tau_rec = 57 ms
+tau_facil = 192 ms
+U = 0.90
+
+[PD pathway]
+tau_rec = 460.2 ms
+tau_facil = 20 ms
+U = 0.318
