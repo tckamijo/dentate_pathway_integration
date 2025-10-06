@@ -1,0 +1,55 @@
+# ---- macOS system files ----
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ---- Backup and temporary archives ----
+*.tar.gz
+*.zip
+*.bak
+*.tmp
+
+# ---- Python cache and compiled files ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ---- Virtual environment folders ----
+.venv/
+env/
+venv/
+ENV/
+.ipynb_checkpoints/
+
+# ---- Logs ----
+*.log
+
+# ---- Data and intermediate files ----
+*.csv~
+*.dat~
+*.tmp
+*.npy
+*.npz
+
+# ---- IDE and editor files ----
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- Figures and output files ----
+*.tiff
+*.png
+*.jpg
+*.jpeg
+
+# (optional) Keep only final figures under Figures/
+!Figures/
+
+# ---- OS-specific trash ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
