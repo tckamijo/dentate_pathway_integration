@@ -7,7 +7,9 @@ Low-medium freq (<20Hz): τ_rec=460, τ_facil=20, U=0.32
 High freq (≥20Hz): τ_rec=184.0, τ_facil=52.5, U=0.2135
 Based on experimental evidence from Figure 4 showing facilitation onset at 20Hz
 
-Filename: figure5_pd_validation_20hz_threshold.py
+MAIN TITLE REMOVED
+
+Filename: figure5_pd_validation_20hz_threshold_notitle.py
 """
 
 import numpy as np
@@ -170,7 +172,7 @@ def run_comprehensive_validation():
     logging.info("Starting comprehensive PD pathway validation with 20Hz threshold")
     
     # Test frequencies spanning both domains
-    test_frequencies = [0.1, 1.0, 5.0, 10.0, 20.0, 30.0, 40.0]
+    test_frequencies = [0.1, 0.2, 1.0, 5.0, 10.0, 20.0, 30.0, 40.0]
     logging.info(f"Testing frequencies: {test_frequencies}")
     
     validation_results = []
@@ -270,28 +272,15 @@ def create_figure5_validation(validation_results):
         ax.text(0.02, 0.02, domain_text, transform=ax.transAxes, fontsize=10,
                verticalalignment='bottom', horizontalalignment='left',
                color=domain_color, fontweight='bold')
-        
-        # Highlight 20Hz transition
-        if frequency == 20.0:
-            ax.set_facecolor('#f0f8ff')  # Light blue background
-            ax.text(0.5, 0.95, 'THRESHOLD', transform=ax.transAxes, 
-                   fontsize=11, ha='center', va='top', color='purple', 
-                   fontweight='bold', alpha=0.7)
     
+    # Main title removed - described in figure caption
     plt.tight_layout()
-    
-    # Add overall title
-    fig.suptitle('Figure 5: PD Pathway Validation with 20Hz Threshold\n' +
-                'Low-medium freq (<20Hz): τ_rec=460ms, τ_facil=20ms, U=0.32\n' +
-                'High freq (≥20Hz): τ_rec=184ms, τ_facil=52.5ms, U=0.2135',
-                fontsize=16, fontweight='bold', y=1.02)
-    
-    plt.subplots_adjust(top=0.92)
+    plt.subplots_adjust(top=0.96, hspace=0.25, wspace=0.22)
     
     # Save files
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    png_file = f"Figure5_PD_Validation_20Hz_Threshold_{timestamp}.png"
-    tiff_file = f"Figure5_PD_Validation_20Hz_Threshold_{timestamp}.tiff"
+    png_file = f"Figure5_PD_Validation_20Hz_NoTitle_{timestamp}.png"
+    tiff_file = f"Figure5_PD_Validation_20Hz_NoTitle_{timestamp}.tiff"
     csv_file = f"Figure5_PD_validation_data_20Hz_{timestamp}.csv"
     
     # Save high-resolution images
@@ -393,7 +382,7 @@ def main():
     print("Figure 5: PD Parameter Validation with 20Hz Threshold")
     print("=" * 70)
     print("NO FABRICATION - Experimental parameters with 20Hz threshold")
-    print("Based on Figure 4 showing facilitation onset at 20Hz")
+    print("MAIN TITLE REMOVED FOR PUBLICATION")
     print("=" * 70)
     
     # Setup logging
@@ -417,7 +406,7 @@ def main():
         print("="*70)
         print(f"Debug log: {log_file}")
         print("20Hz threshold validation confirmed")
-        print("Ready for Figures 6-8 with updated threshold")
+        print("Main title removed - described in figure caption")
         
         logging.info("Figure 5 generation completed successfully")
         
