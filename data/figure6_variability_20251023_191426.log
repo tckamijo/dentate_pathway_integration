@@ -1,0 +1,15 @@
+2025-10-23 19:14:26,879 - INFO - ======================================================================
+2025-10-23 19:14:26,879 - INFO - FIGURE 6: THREE-PATHWAY INTEGRATION WITH VARIABILITY
+2025-10-23 19:14:26,879 - INFO - 30 trials per condition, CV = 0.20
+2025-10-23 19:14:26,879 - INFO - ======================================================================
+2025-10-23 19:14:26,879 - INFO - Starting integration analysis with 30 trials, CV=0.2
+2025-10-23 19:14:26,879 - INFO - Total test conditions: 1029
+2025-10-23 19:14:28,649 - INFO - Completed 1029 integration tests
+2025-10-23 19:14:28,650 - INFO - Generating Figure 6
+2025-10-23 19:14:30,009 - INFO - Saved PNG: Figure6_Integration_variability_20251023_191428.png
+2025-10-23 19:14:31,938 - INFO - Saved TIFF: Figure6_Integration_variability_20251023_191428.tiff
+2025-10-23 19:14:31,945 - INFO - Saved CSV: Figure6_data_variability_20251023_191428.csv
+2025-10-23 19:14:31,949 - INFO - ======================================================================
+2025-10-23 19:14:31,949 - INFO - COMPLETE
+2025-10-23 19:14:31,949 - INFO - Files: Figure6_Integration_variability_20251023_191428.png, Figure6_Integration_variability_20251023_191428.tiff, Figure6_data_variability_20251023_191428.csv
+2025-10-23 19:14:31,949 - INFO - ======================================================================

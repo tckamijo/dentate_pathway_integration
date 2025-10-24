@@ -1,0 +1,13 @@
+2025-10-23 19:17:31,613 - INFO - ======================================================================
+2025-10-23 19:17:31,613 - INFO - FIGURE 7: MECHANISM ANALYSIS WITH VARIABILITY
+2025-10-23 19:17:31,613 - INFO - 30 trials per condition, CV = 0.20
+2025-10-23 19:17:31,613 - INFO - ======================================================================
+2025-10-23 19:17:31,613 - INFO - Beginning mechanism analysis with 30 trials, CV=0.2
+2025-10-23 19:17:31,728 - INFO - Performing frequency sweep
+2025-10-23 19:17:31,815 - INFO - Completed 64 test conditions
+2025-10-23 19:17:31,815 - INFO - Generating Figure 7
+2025-10-23 19:17:35,007 - INFO - Saved: Figure7_Mechanism_variability_20251023_191731.png, Figure7_Mechanism_variability_20251023_191731.tiff, Figure7_data_variability_20251023_191731.csv
+2025-10-23 19:17:35,010 - INFO - ======================================================================
+2025-10-23 19:17:35,010 - INFO - COMPLETE
+2025-10-23 19:17:35,010 - INFO - Files: Figure7_Mechanism_variability_20251023_191731.png, Figure7_Mechanism_variability_20251023_191731.tiff, Figure7_data_variability_20251023_191731.csv
+2025-10-23 19:17:35,010 - INFO - ======================================================================
