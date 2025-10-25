@@ -75,7 +75,13 @@ def get_pd_parameters(frequency):
     return (460.0, 20.0, 0.32) if frequency < 20.0 else (184.0, 52.5, 0.2135)
 
 def create_pathway_synapses(pattern_frequencies):
-    pd_freq = np.mean(pattern_frequencies.get('PD', [15.0])) if pattern_frequencies.get('PD') else 15.0
+    pd_pattern = pattern_frequencies.get('PD', [15.0])
+    # Check if array is not empty before computing mean
+    if len(pd_pattern) > 0:
+        pd_freq = np.mean(pd_pattern)
+    else:
+        pd_freq = 15.0
+    
     pd_tau_rec, pd_tau_facil, pd_U = get_pd_parameters(pd_freq)
     
     return {
@@ -403,11 +409,45 @@ def create_natural_patterns_figure(results):
     ax5.legend()
     ax5.grid(True, alpha=0.3)
     
-    # Panel F: Removed (was Summary statistics table)
+    # Panel F: Overall Summary (RESTORED)
     ax6 = axes[1, 2]
-    ax6.axis('off')
     
-    plt.tight_layout()
+    # Create histogram
+    ax6.hist(interaction_coeffs, bins=15, alpha=0.7, color='skyblue',
+             edgecolor='black', density=True, linewidth=1.5)
+    
+    # Calculate statistics
+    mean_coeff = np.mean(interaction_coeffs)
+    median_coeff = np.median(interaction_coeffs)
+    sem_coeff = stats.sem(interaction_coeffs)
+    
+    # Add vertical lines
+    ax6.axvline(mean_coeff, color='red', linestyle='--', linewidth=2,
+                label=f'Mean: {mean_coeff:.3f}%')
+    ax6.axvline(0, color='black', linestyle='-', alpha=0.7,
+                label='Linear summation')
+    
+    ax6.set_xlabel('Interaction Coefficient (%)')
+    ax6.set_ylabel('Probability Density')
+    ax6.set_title('F. Overall Summary', fontweight='bold')
+    ax6.legend(fontsize=9)
+    ax6.grid(True, alpha=0.3)
+    
+    # Add statistics text box
+    stats_text = (f'Mean ± SEM: {mean_coeff:.3f} ± {sem_coeff:.3f}%\n'
+                  f'Range: {min(interaction_coeffs):.2f} to {max(interaction_coeffs):.2f}%\n'
+                  f'n = {len(interaction_coeffs)} patterns\n'
+                  f'({n_trials} trials each, CV={cv})')
+    ax6.text(0.02, 0.98, stats_text, transform=ax6.transAxes, fontsize=9,
+             verticalalignment='top', 
+             bbox=dict(boxstyle='round', facecolor='white', alpha=0.9))
+    
+    # Add overall figure title
+    fig.suptitle('Figure 8. Natural Input Patterns Analysis\n' + 
+                 f'Mean ± SEM (n={n_trials} trials, CV={cv})',
+                 fontsize=16, fontweight='bold', y=0.995)
+    
+    plt.tight_layout(rect=[0, 0, 1, 0.98])
     
     # Save
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
