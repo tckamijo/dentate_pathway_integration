@@ -403,26 +403,8 @@ def create_natural_patterns_figure(results):
     ax5.legend()
     ax5.grid(True, alpha=0.3)
     
-    # Panel F: Summary statistics
+    # Panel F: Removed (was Summary statistics table)
     ax6 = axes[1, 2]
-    ax6.text(0.5, 0.9, 'Summary Statistics', ha='center', fontsize=14, fontweight='bold', transform=ax6.transAxes)
-    
-    summary_text = f"""
-    Total patterns tested: {len(results)}
-    Trials per pattern: {n_trials}
-    Coefficient of variation: {cv}
-    
-    Mean interaction: {np.mean(interaction_coeffs):.2f}%
-    Std interaction: {np.std(interaction_coeffs):.2f}%
-    Range: [{min(interaction_coeffs):.2f}, {max(interaction_coeffs):.2f}]%
-    
-    References:
-    • Nusser et al., 2001
-    • Smith et al., 2003
-    """
-    
-    ax6.text(0.1, 0.7, summary_text, ha='left', va='top', fontsize=10, 
-            family='monospace', transform=ax6.transAxes)
     ax6.axis('off')
     
     plt.tight_layout()

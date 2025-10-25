@@ -1,0 +1,12 @@
+2025-10-25 11:29:13,087 - INFO - ======================================================================
+2025-10-25 11:29:13,087 - INFO - FIGURE 8: NATURAL PATTERNS WITH VARIABILITY
+2025-10-25 11:29:13,087 - INFO - 30 trials per condition, CV = 0.20
+2025-10-25 11:29:13,087 - INFO - ======================================================================
+2025-10-25 11:29:13,087 - INFO - Beginning analysis with 30 trials, CV=0.2
+2025-10-25 11:29:13,159 - INFO - Completed 12 patterns
+2025-10-25 11:29:13,159 - INFO - Generating Figure 8
+2025-10-25 11:29:17,075 - INFO - Saved: Figure8_patterns_variability_20251025_112913.png, Figure8_patterns_variability_20251025_112913.tiff, Figure8_data_variability_20251025_112913.csv
+2025-10-25 11:29:17,075 - INFO - ======================================================================
+2025-10-25 11:29:17,075 - INFO - COMPLETE
+2025-10-25 11:29:17,075 - INFO - Files: Figure8_patterns_variability_20251025_112913.png, Figure8_patterns_variability_20251025_112913.tiff, Figure8_data_variability_20251025_112913.csv
+2025-10-25 11:29:17,075 - INFO - ======================================================================
